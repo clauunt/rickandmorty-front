@@ -1,0 +1,22 @@
+<app-nabvar></app-nabvar>
+
+<div class="list-cards row row-cols-1 row-cols-md-4 g-0">
+  <app-card class="col" [data]="item" *ngFor="let item of characters;" (click)="openModal(item.id)" data-bs-toggle="modal" data-bs-target="#modalDetailCharacter"></app-card>
+</div>
+
+<div class="modal fade" id="modalDetailCharacter" tabindex="-1" aria-labelledby="modalDetailCharacterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalDetailCharacterLabel">Detalle Personaje</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-character-detail [id]="selectedId!=null ? selectedId : 0"></app-character-detail>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

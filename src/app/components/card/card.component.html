@@ -1,0 +1,16 @@
+<div class="card text-bg-light">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{data?.image}}" class="img-fluid rounded-start" alt="image-character">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">{{data?.name}}</h3>
+                <h6 class="card-title">
+                    <i class="bi bi-circle-fill characters-status-{{data?.status}}"></i> {{data?.status}}
+                </h6>
+                <p class="card-text">Gender : {{data?.gender}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+- abrir y mostrar info en modal
+- cambiar color de tarjeta
+- agregar paginado
+- modificaciones en general css

@@ -1,0 +1,16 @@
+.characters-status-Dead { 
+    color:rgb(214, 61, 46); 
+}
+
+.characters-status-Alive {
+    color:rgb(85, 204, 68);  
+}
+
+.characters-status-unknown {
+    color:rgb(119, 119, 119);  
+}
+
+.card {
+    min-height: 140px;
+    padding: 15px;
+}
