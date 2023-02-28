@@ -5,7 +5,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CharacterService {
-
   _url = 'https://rickandmortyapi.com/api/character';
     
   constructor(

@@ -6,19 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { NabvarComponent } from './components/nabvar/nabvar.component';
-import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     NabvarComponent,
-    CharacterDetailComponent  
+    ModalComponent  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

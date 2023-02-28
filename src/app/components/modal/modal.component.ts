@@ -1,21 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { CharacterService } from 'src/app/services/character.service';
 import { Character } from 'src/app/interfaces/character';
 
 @Component({
-  selector: 'app-character-detail',
-  templateUrl: './character-detail.component.html',
-  styleUrls: ['./character-detail.component.css']
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
 
-export class CharacterDetailComponent implements OnInit {
-  @Input() id: number;
+export class ModalComponent implements OnInit {
+  @Input() id: any;
+  @Output() closeModal = new EventEmitter();
   character: Character;
 
   constructor(
     private characterService: CharacterService
   ){
-    
+
   }
 
   ngOnInit(): void {
@@ -25,5 +26,7 @@ export class CharacterDetailComponent implements OnInit {
     })
   }
 
-
+  onCloseModal(): void {
+    this.closeModal.emit();
+  }
 }

@@ -1,3 +1,12 @@
+body {
+    background-image: url("assets/images/fondo.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .list-cards {
     padding: 20px;
 }
+

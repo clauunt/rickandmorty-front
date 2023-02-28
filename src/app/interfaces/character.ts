@@ -6,6 +6,7 @@ export interface Character {
     location: Location;
     species: string;
     origin: Origin;
+    image: string;
 }
 
 interface Location {

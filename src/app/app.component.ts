@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CharacterService } from 'src/app/services/character.service';
 import { Character } from './interfaces/character';
 
@@ -11,13 +10,11 @@ import { Character } from './interfaces/character';
 
 export class AppComponent {
   title = 'rickandmorty-front';
-  selectedId: number = 2;
   public characters: Array<Character> = [];
-  
+  selectedId: number;
+
   constructor(
-    private characterService: CharacterService, 
-    private router: Router,
-    private route: ActivatedRoute,
+    private characterService: CharacterService
   ){
 
     this.characterService.getAllCharacters().subscribe((resp: any) => {
@@ -26,8 +23,17 @@ export class AppComponent {
 
   }
 
-  openModal(id: number){
+  setSelectedId(id: number) {
     this.selectedId = id;
   }
-
+/*
+  openModal(id: number){
+    if(id){
+      this.characterService.getCharacterByID(id).subscribe((resp: any) => {
+        this.character = resp;
+        console.log(resp);
+      })
+    }
+  }
+*/
 }

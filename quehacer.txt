@@ -1,4 +1,3 @@
-- abrir y mostrar info en modal
-- cambiar color de tarjeta
 - agregar paginado
+- solucionar error al abrir modal con detalle
 - modificaciones en general css

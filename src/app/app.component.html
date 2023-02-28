@@ -1,18 +1,22 @@
 <app-nabvar></app-nabvar>
 
-<div class="list-cards row row-cols-4 row-cols-md-4 g-4">
-  <app-card class="col" [data]="item" *ngFor="let item of characters;" (click)="openModal(item.id)" data-bs-toggle="modal" data-bs-target="#modalDetailCharacter"></app-card>
-</div>
-
-<div class="modal fade" id="modalDetailCharacter" tabindex="-1" aria-labelledby="modalDetailCharacterLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <app-character-detail [id]="selectedId!=null ? selectedId : 0"></app-character-detail>
-      </div>
-    </div>
+<div class="col-md-12">
+  <div class="list-cards row row-cols-4 g-5">
+    <app-card class="col" [data]="item" *ngFor="let item of characters;" (click)="setSelectedId(item.id)"></app-card>
   </div>
 </div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<app-modal *ngIf="selectedId" [id]="selectedId" (closeModal)="setSelectedId(0)"></app-modal>
+
