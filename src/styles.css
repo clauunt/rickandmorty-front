@@ -19,10 +19,6 @@ body {
     border-radius: 0;
 }
 
-.form-control option:hover {
-    background-color: #4CAF50;
-}
-
 .pagination {
     margin-left: 1vh;
     display: inline-block;

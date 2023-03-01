@@ -13,14 +13,10 @@ export class CardComponent implements OnInit{
     private characterService: CharacterService 
   ){}
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   getCharacterModal(id:number) {
-    return this.characterService.getCharacterByID(id).subscribe((resp: any) => {
-      //console.log(resp)
-    })
+    return this.characterService.getCharacterByID(id).subscribe((resp: any) => {})
   }
   
 }
