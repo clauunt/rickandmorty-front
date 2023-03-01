@@ -2,21 +2,31 @@
 
 <div class="col-md-12">
   <div class="list-cards row row-cols-4 g-5">
-    <app-card class="col" [data]="item" *ngFor="let item of characters;" (click)="setSelectedId(item.id)"></app-card>
+    <app-card class="col" [data]="item" *ngFor="let item of cards;" (click)="setSelectedId(item.id)"></app-card>
   </div>
 </div>
 
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled"><a class="page-link">Previous</a></li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+
+
+<div class="row">
+  <div class="custom-pagination col-md-12 d-flex justify-content-center">
+    <div class="form-inline float-left mr-1">
+      <select class="paginator-select form-control" [value]="cardsPerPage" (change)="changePageSize($event)">
+        <option value="4">4 Per Page</option>
+        <option value="8">8 Per Page</option>
+        <option value="12">12 Per Page</option>
+        <option value="16">16 Per Page</option>
+        <option value="20">20 Per Page</option>
+      </select>
+    </div>
+    <div class="pagination float-right">
+      <a href="#" [class]="(selectedPage == 1) ? 'isDisabled' : '' " (click)="changeToPrevious()">Previous</a>
+      <a href="#" *ngFor="let page of pageNumbers" (click)="changePage(page)" [class]="(page == selectedPage) ? 'active' : ''">{{page}}</a>
+      <a href="#" [class]="(selectedPage >= cardsNumPage) ? 'isDisabled' : '' " (click)="changeToNext()">Next</a>
+    </div>
+    
+  </div>
+</div>
 
 <app-modal *ngIf="selectedId" [id]="selectedId" (closeModal)="setSelectedId(0)"></app-modal>
 

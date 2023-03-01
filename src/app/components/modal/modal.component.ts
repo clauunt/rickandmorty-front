@@ -22,7 +22,6 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.characterService.getCharacterByID(this.id).subscribe((resp: any) => {
       this.character = resp;
-      console.log(resp);
     })
   }
 
