@@ -1,27 +1,40 @@
-# RickandmortyFront
+# Rick and Morty App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+Una aplicación web desarrollada en Angular para explorar el universo de Rick and Morty, visualizando personajes y sus detalles.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+-   **Listado de Personajes**: Visualización de personajes en formato de tarjetas.
+-   **Paginación Personalizada**: Control total sobre la cantidad de personajes mostrados por página (4, 8, 12, 16, 20) y navegación fluida entre páginas.
+-   **Detalles del Personaje**: Modal interactivo que muestra información detallada al seleccionar un personaje.
+-   **Diseño Responsivo**: Interfaz adaptada a diferentes dispositivos utilizando Bootstrap 5.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-   **Angular 15**: Framework principal para el desarrollo de la aplicación.
+-   **Bootstrap 5**: Framework CSS para el diseño y componentes responsivos.
+-   **RxJS**: Manejo de flujos de datos asíncronos.
+-   **Rick and Morty API**: Fuente de datos para los personajes.
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1.  Clonar el repositorio:
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    ```
+2.  Navegar al directorio del proyecto:
+    ```bash
+    cd rickandmorty-front
+    ```
+3.  Instalar las dependencias:
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+## Uso
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1.  Iniciar el servidor de desarrollo:
+    ```bash
+    ng serve
+    ```
+2.  Abrir el navegador en `http://localhost:4200/`.
